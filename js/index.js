@@ -1,6 +1,5 @@
 var today = new Date();
 var thisYear = today.getFullYear();
-// document.getElementById("currentYear").innerHTML = thisYear;
 let footer = document.querySelector('footer');
 let copyright = document.createElement('p');
 copyright.innerText = `Victoria ${thisYear}`;
@@ -19,9 +18,8 @@ for (let i=0; i<skills.length; i++) {
     };
     let messageForm = document.getElementsByName('leave_message');  
     console.log (messageForm)
-    messageForm.addEventListener('submit', logSubmit);
-    messageForm.addEventListener("click", () =>{
-        console.log ("Hello")
+ 
+    messageForm.addEventListener("submit", (event) =>{
         event.preventDefault()
         const name = event.target.name
         const email = event.target.email
