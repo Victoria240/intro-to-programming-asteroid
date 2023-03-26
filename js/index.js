@@ -43,3 +43,52 @@ for (let i=0; i<skills.length; i++) {
         messageForm[0].reset()
         
     })
+
+    let githubRequest = new XMLHttpRequest();
+githubRequest.open('GET', 'https://api.github.com/users/Victoria240/repos');
+githubRequest.send();
+
+githubRequest.addEventListener('load', function(event) {
+  let repositories = JSON.parse(this.response);
+  console.log(repositories);
+
+  // DOM Selection
+  const projectSection = document.querySelector('#projects');
+  const projectList = projectSection.querySelector('ul');
+
+  // Loop through repositories Array
+  for (let i = 0; i < repositories.length; i++) {
+    // Create new list item element
+    const project = document.createElement('li');
+    // Set the inner text of the project element
+    project.innerText = repositories[i].name;
+    // Append the project element to the projectList element
+    projectList.appendChild(project);
+  }
+});
+
+
+// Loop through repositories array
+for (let i = 0; i < repositories.length; i++) {
+  // Create new list item element
+  const project = document.createElement('li');
+
+  // Create new link element
+  const link = document.createElement('a');
+  link.href = repositories[i].html_url;
+  link.target = '_blank'; // Open link in new tab
+  link.innerText = repositories[i].name;
+  
+  // Create new paragraph element for additional info
+  const description = document.createElement('p');
+  description.innerText = repositories[i].description;
+
+  // Append link and description elements to project element
+  project.appendChild(link);
+  project.appendChild(description);
+
+  // Append project element to projectList element
+  projectList.appendChild(project);
+}
+
+
