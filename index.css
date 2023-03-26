@@ -1,5 +1,4 @@
-     
-     
+   
      h1, h2, h3, h4, h5, h6, p, li {
         font-family: 'Inter',
           sans-serif;
@@ -18,169 +17,130 @@ p{
  color: F7F7F7F
 }
 
-/* Nav start */
-.navbar {
-   position: fixed;
-   top: 0;
-   left: 0;
-   width: 100%;
-   background-color: #fff;
-   z-index: 999;
-}
-
-.navbar ul {
-   margin: 0;
-   padding: 0;
-   list-style: none;
-   display: flex;
-}
-
-.navbar li {
-   margin-right: 20px;
-}
-
-.navbar li:last-child {
-   margin-right: 0;
-}
-
-.navbar a {
-   display: block;
-   padding: 10px;
-   color: #333;
-   text-decoration: none;
-   font-weight: bold;
-   transition: all 0.3s ease;
-}
-
-.navbar a:hover {
-   color: #fff;
-   background-color: #FB8C00;
-}
-
-/* Nav ends */
 
 #body {
- background-color: #0C0145;
-}
+    background-color: #0C0145;
+  }
+  
+  #label {
+    color: #aaaaaa;
+    font-size: 20px;
+  }
+  
+  .section {
+    margin: 8px;
+    padding: 8px;
+    padding-top: 24px;
+  }
+  
+  .experience {
+    background-color: white;
+    border-radius: 4px;
+  }
+  
+  .list {
+     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .list li{
+     display: flex;
+    flex-direction: row;
+    color: black;
+  }
+  
+  .skills {
+    border: 2px solid white;
+    border-radius: 4px;
+  }
+  
+  
+  .input {
+    font-size: 40px;
+  }
+  
+  .form{
+    display:flex;
+    flex-direction: column;
+  /*   flex-wrap: wrap; */
+  }
+  .form input, textarea {
+  margin-bottom: 0px;
+    
+  }
+  
+  
+  .form button {
+    background-color: #FB8C00;
+     border-radius: 4px;
+     margin-bottom:48px;
+    border: none;
+    color:white;
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+  }
+  
+  .messages{
+     border: 2px solid white;
+    border-radius: 4px;
+  }
+  
+  #messages form{
+     display:flex;
+    flex-direction: column;
+  }
+  
+  .footer{
+     background-color: #FB8C00;
+  }
+  
+  .footer p {
+    margin: 20px;
+  }
+  
+  
+  
+  #projects ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;}
+  
+  #projects li {
+    background-color: #f8f8f8;
+    color:black;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  #projects a {
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  #projects a:hover {
+    color: #f8f8f8;
+    background-color: #333;
+  }
+  
+  
 
-#label {
- color: #aaaaaa;
- font-size: 20px;
-}
-
-.section {
- margin: 8px;
- padding: 8px;
- padding-top: 24px;
-}
-
-.experience {
- background-color: white;
- border-radius: 4px;
-}
-
-.list {
-  display: grid;
- grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
- gap: 20px;
-}
-
-.list li{
-  display: flex;
- flex-direction: row;
- color: black;
-}
-
-.skills {
- border: 2px solid white;
- border-radius: 4px;
-}
-
-
-.input {
- font-size: 40px;
-}
-
-.form{
- display:flex;
- flex-direction: column;
-/*   flex-wrap: wrap; */
-}
-.form input, textarea {
-margin-bottom: 0px;
- 
-}
-
-
-.form button {
- background-color: #FB8C00;
-  border-radius: 4px;
-  margin-bottom:48px;
- border: none;
- color:white;
- width: 120px;
- height: 40px;
- cursor: pointer;
-}
-
-.messages{
-  border: 2px solid white;
- border-radius: 4px;
-}
-
-#messages form{
-  display:flex;
- flex-direction: column;
-}
-
-.footer{
-  background-color: #FB8C00;
-}
-
-.footer p {
- margin: 20px;
-}
-
-
-
-#projects ul {
- display: grid;
- grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
- grid-gap: 20px;
- list-style-type: none;
- margin: 0;
- padding: 0;}
-
-#projects li {
- background-color: #f8f8f8;
- color:black;
- border-radius: 10px;
- box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
- padding: 20px;
- text-align: center;
-}
-
-#projects a {
- color: #333;
- font-weight: bold;
- text-decoration: none;
-}
-
-#projects a:hover {
- color: #f8f8f8;
- background-color: #333;
-}
-
-
-
-@media only screen and (max-width: 767px) {
- /* CSS styles for mobile devices */
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
- /* CSS styles for tablet devices */
-}
-
-@media only screen and (min-width: 1024px) {
- /* CSS styles for desktop devices */
-}
+  @media only screen and (max-width: 767px) {
+    /* CSS styles for mobile devices */
+  }
+  
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* CSS styles for tablet devices */
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    /* CSS styles for desktop devices */
+  }
+    
